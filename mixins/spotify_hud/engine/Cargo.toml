@@ -1,0 +1,18 @@
+[package]
+name = "spotify-hud-engine"
+version = "1.0.0"
+edition = "2024"
+publish = false
+description = "Spotify HUD for Horizon: Spotify playback, login, settings and the HUD box's layout."
+
+# Only crates in Horizon's Cargo.lock, by version requirement (docs/native-mods.md, "The mod's crate").
+[dependencies]
+ureq = { version = "2", default-features = false, features = ["tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+zune-jpeg = { version = "0.4", default-features = false, features = ["std"] }
+sha2 = "0.10"
+base64 = "0.22"
+getrandom = "0.3"
+open = { version = "5", features = ["shellexecute-on-windows"] }
+arboard = { version = "3", default-features = false }
